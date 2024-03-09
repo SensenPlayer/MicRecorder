@@ -1,0 +1,4 @@
+# Compile File
+*.dll
+bin/
+obj/
