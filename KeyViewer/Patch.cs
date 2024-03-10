@@ -15,6 +15,12 @@ namespace MicRecorder
         {
             private static void Prefix()
             {
+                if (Main.isRecording == true)
+                {
+                    Main.isRecording = false;
+                    stopRecording();
+                }
+                Main.isRecording = true;
                 startRecord();
             }
         }
@@ -24,6 +30,7 @@ namespace MicRecorder
         {
             private static void Prefix()
             {
+                Main.isRecording = false;
                 stopRecording();
             }
         }
@@ -38,6 +45,7 @@ namespace MicRecorder
                     return;
                 }
 
+                Main.isRecording = false;
                 stopRecording();
             }
         }

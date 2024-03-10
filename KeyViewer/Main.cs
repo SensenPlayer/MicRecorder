@@ -5,6 +5,7 @@ using UnityModManagerNet;
 using UnityEngine;
 using NAudio.Wave;
 using NAudio.Lame;
+using System;
 
 
 
@@ -24,6 +25,7 @@ namespace MicRecorder
 
         public static WaveInEvent waveIn;
         public static LameMP3FileWriter writer;
+        public static Boolean isRecording = false;
 
         public static List<string> microphones = GetMicrophones();
 
